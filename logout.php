@@ -2,6 +2,6 @@
 session_start();
 session_destroy();
 setcookie('username','$cookie',time()-60,"","","");
-header('Location: /');
+header('Location: /3space_local');
 
 ?>

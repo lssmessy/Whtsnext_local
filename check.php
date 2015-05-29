@@ -37,7 +37,7 @@ if(empty($_POST)===false)
 			$_SESSION['user_id']=$login;
 			$_SESSION['user_name']=$username;
 			$cookie_alive=set_cookie($username);
-			header('Location: /welcome.php');
+			header('Location: welcome.php');
 			exit();
 		}
 	}

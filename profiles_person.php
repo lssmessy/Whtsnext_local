@@ -2,7 +2,7 @@
 include('core/init.php');
 include ('header_home.php');
 if(logged_in()===false){
-header('Location: /index.php');
+header('Location: index.php');
 exit();
 }
 if(isset($_GET['user']))

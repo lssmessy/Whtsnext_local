@@ -16,7 +16,7 @@ if(isset($_FILES['profile'])==true)
 	if(in_array($file_extn,$allowed)==true && $file_size<=$max_size)
 	{
 		change_profie_pic($user_id,$file_temp,$file_extn);
-		header('Location:/welcome.php');
+		header('Location:welcome.php');
 	
 	
 	//allowed to upload

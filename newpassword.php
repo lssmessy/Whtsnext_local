@@ -61,7 +61,7 @@ if(isset($_GET['Email'],$_GET['recovery_code'])==true)
 			{
 			$password=$_POST['password'];
 			$istrue=recover_password($password,$email);
-			echo "Your password has been successfully changed..Please <a href='/index'>Login now</a></br>";
+			echo "Your password has been successfully changed..Please <a href='index.php'>Login now</a></br>";
 			exit();
 			}
 		else if(empty($errors)==false)

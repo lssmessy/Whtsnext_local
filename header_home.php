@@ -22,7 +22,7 @@
 	</div>
 	<div class="collapse navbar-collapse" id="mynavbar">
 	<ul class="nav navbar-nav navbar-right">
-	<li ><a href="/welcome.php"><strong><span class="glyphicon glyphicon-home"></span> Home</strong></a></li>
+	<li ><a href="welcome.php"><strong><span class="glyphicon glyphicon-home"></span> Home</strong></a></li>
 	<li ><a href="?profile"><strong><span class="glyphicon glyphicon-user"></span> Profile</strong></a></li>
 	<li ><a href="?idea"><strong><span class="glyphicon glyphicon-exclamation-sign"></span> Idea</strong></a></li>
 	<li ><a href="?browse"><strong><span class="glyphicon glyphicon-eye-open"></span> Browse</strong></a></li>

@@ -44,7 +44,7 @@ else{
 	if(empty($_POST)==false && empty($errors)==true)
 	{
 		change_password($user_id,$_POST['pass_new']);
-		header('Location: /changepassword.php?success');
+		header('Location: changepassword.php?success');
 	}
 	else if(empty($errors)==false)
 {
@@ -60,7 +60,7 @@ else{
 		<li>Re-type new Password *:</li>
 		<li><input type="password" name="pass_new_again"></li><br>
 		<input type="submit" value="Change Password" class=" btn btn-primary" id="register_btn">
-		<input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='/welcome.php'" id="register_btn">
+		<input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='welcome.php'" id="register_btn">
 </ul>
 </form></div></div>
 <?php }?>

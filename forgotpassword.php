@@ -42,7 +42,7 @@ else {
 if(empty($errors)==true && empty($_POST)===false)
 {
 	$reset_pwd=reset_password($_POST['email']);
-	header('Location: /forgotpassword.php?success&email='.$_POST['email'].'');
+	header('Location: forgotpassword.php?success&email='.$_POST['email'].'');
 	exit();
 }
 else if(empty($errors)==false)
@@ -55,7 +55,7 @@ else if(empty($errors)==false)
 <li><input type="email" name="email" style="padding:5px;" size="30">
 </li></br>
 <li><input type="submit" value="Submit" class=" btn btn-primary" id="register_btn">
- <input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='/welcome.php'" id="register_btn">
+ <input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='welcome.php'" id="register_btn">
 </li> 
 </form></div></div>
 <?php }?>

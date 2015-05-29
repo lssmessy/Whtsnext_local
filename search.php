@@ -36,7 +36,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("result").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","/AJAX/name.php?search="+str,true);
+xmlhttp.open("GET","AJAX/name.php?search="+str,true);
 xmlhttp.send();
 }
 </script>

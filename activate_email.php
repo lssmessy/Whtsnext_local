@@ -35,7 +35,7 @@ else if(empty($errors)==true && empty($_POST)==false)
 		'Email'      =>$_POST['email'],
 		'Email_Code'  =>md5($_POST['email']+ microtime()));
 		email_active_again($register_data);
-		header('Location: /activate_email.php?success&email='.$_POST['email'].'');
+		header('Location: activate_email.php?success&email='.$_POST['email'].'');
 	exit();
 }
 if(empty($errors)==false or empty($_POST)==true)
@@ -52,7 +52,7 @@ if(empty($errors)==false or empty($_POST)==true)
 <input type="email" name="email" size="35" autofocus />
 </div>
 <input type="submit" value="Submit" class="btn btn-success">&nbsp &nbsp
- <input type="button" value="Cancel" onclick="location.href ='/index.php'" class="btn btn-default">
+ <input type="button" value="Cancel" onclick="location.href ='index.php'" class="btn btn-default">
 </form>
 <?php }?>
 </div>

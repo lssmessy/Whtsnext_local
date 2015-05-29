@@ -9,7 +9,7 @@ if(isset($_GET['great'])==true)
 <h1> Congratulations..!!!</h1>
 
 <?php
-echo "<p>Your account has been successfully activated!!<a href='/'>Log in now</a></p>";
+echo "<p>Your account has been successfully activated!!<a href='index.php'>Log in now</a></p>";
 }
 else if(isset($_GET['Email'],$_GET['Email_Code'])==true)
 {
@@ -34,12 +34,12 @@ else if(isset($_GET['Email'],$_GET['Email_Code'])==true)
 	else
 	{
 		echo "in activate suceess loop";
-		header('Location: /activate.php?great');
+		header('Location: activate.php?great');
 	}
 }
 else
 {
-	header('Location : /index.php');
+	header('Location : index.php');
 	exit();
 }
 ?>

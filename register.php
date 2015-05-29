@@ -76,7 +76,7 @@ if(empty($_POST)==false && empty($errors)==true)
 	'Profession'      =>$_POST['profession'],
 	'Email_Code'  =>md5($_POST['username']+ microtime()));
 	register_user($register_data);
-	header('Location: /register.php?success');
+	header('Location: register.php?success');
 	exit();
 	
 }
@@ -372,7 +372,7 @@ if(empty($_POST)==false && empty($errors)==true)
 
 </div>
 
-&nbsp &nbsp <input type="submit" value="Register" class="btn btn-primary"> <input type="button" value="Cancel" onclick="location.href ='/'" class="btn btn-default">
+&nbsp &nbsp <input type="submit" value="Register" class="btn btn-primary"> <input type="button" value="Cancel" onclick="location.href ='index.php'" class="btn btn-default">
 </form></div>
         <div class="col-sm-4"></div>
       </div>

@@ -13,7 +13,7 @@ $userdata=user_data($user_id,'Username','Password',
 if(user_active($userdata['Username'])===false)
 {
 	session_destroy();
-	header('Location: /index.php');
+	header('Location: index.php');
 }
 }
 $errors=array();

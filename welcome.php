@@ -2,7 +2,7 @@
 include('core/init.php');
 include ('header_home.php');
 if(logged_in()===false){
-header('Location: /index.php');
+header('Location: index.php');
 exit();
 }
 ?>
@@ -109,7 +109,7 @@ echo '<title>Home</title>';}
 </td>
 <td style="border-top:none; "><center>
 
-<p><a href= "javascript:void(0);" onclick="location.href='/changepassword.php'">Change Password</a></p>
+<p><a href= "javascript:void(0);" onclick="location.href='changepassword.php'">Change Password</a></p>
 <p>Currently we have <?php echo user_count();?> Active <?php echo user_count()==1 ? "user":"users";?>!</p> 
 </center></td></tr><tbody></table>
 </div>

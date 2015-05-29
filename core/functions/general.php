@@ -12,7 +12,7 @@ function login_redirect()
 {
 	if(logged_in()==true)
 	{
-	header('Location: /welcome.php');
+	header('Location: welcome.php');
 	exit();
 	}
 	
@@ -20,7 +20,7 @@ function login_redirect()
 function protect_page(){
 if(logged_in()==false)
 {
-	echo "You dont seems to be logged in or registered!! <a href='/index.php'>Log in </a>";
+	echo "You dont seems to be logged in or registered!! <a href='index.php'>Log in </a>";
 	exit();
 }
 }
