@@ -69,7 +69,7 @@ if(isset($_GET['Email'],$_GET['recovery_code'])==true)
 			"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
 			<p>Password for this account has been changed recently. If that wasn't you then please write 
 			back us at admin@whtsnext.com</p> <br><br>	
-			-Team Whtsnext
+			<strong><a href=http://whtsnext.com/3space_local><h2> -Team Whtsnext </h2></a></strong></body>
 			",$headers);
 			echo "Your password has been successfully changed..Please <a href='index.php'>Login now</a></br>";
 			exit();

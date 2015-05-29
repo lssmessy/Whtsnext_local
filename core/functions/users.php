@@ -211,7 +211,7 @@ function reset_password($email)
 	(or copy-paste below link ) to set new password for your account:<br><br>
 	http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
 	<br><br>
-	<strong><a href=http://whtsnext.com/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
+	<strong><a href=http://whtsnext.com/3space_local><h2> -team whtsnext </h2></a></strong></body>
 	"
 	);
 }
@@ -229,7 +229,7 @@ function reset_password_tifin($email)
 	(or copy-paste below link ) to set new password for your account:<br><br>
 	http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
 	<br><br>
-	<strong><a href=http://whtsnext.com/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
+	<strong><a href=http://whtsnext.com/3space_local><h2> -team whtsnext </h2></a></strong></body>
 	"
 	);
 }
@@ -295,7 +295,7 @@ function register_user($register_data)
 	Username: <em>".$register_data['Username']."</em><br><br>
 	Password: <em>".$pass."</em><br><br> 
 	<br><br><br>
-	<h2>-team whtsnext<h2>"
+	<strong><a href=http://whtsnext.com/3space_local><h2> -team whtsnext </h2></a></strong></body>"
 	);
 	
 }
