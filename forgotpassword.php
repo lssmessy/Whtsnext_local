@@ -34,7 +34,7 @@ if(empty($_POST)===false)
 if(isset($_GET['success']))
 {
 		$domain=explode('@',$_GET['email']);
-		echo "We've sent a link to '<strong> ".$_GET['email']."' </strong> email address for setting a new password!! <a href='http://www.$domain[1]'> Check now </a></br>";
+		echo "We've sent a link to <strong>'".$_GET['email']."' </strong> email address for setting a new password!! <a href='http://www.$domain[1]'> Check now </a></br>";
 		echo "[Note]: Please check your '<strong>[SPAM/JUNK]</strong>' folder if mail doesn't came in your Inbox!!";
 		
 }
