@@ -1,5 +1,5 @@
-<div class="container">
-<div id="register_tab">
+
+ <!--<div id="register_tab"> -->
 <?php
 include "core/init.php";
 include 'header.php';
@@ -33,6 +33,7 @@ if(empty($_POST)==false)
 	
 }
 ?>
+<div class="container">
 <title>Change Password</title>
 <h1>Change Password:</h1>
 <?php 
@@ -62,5 +63,6 @@ else{
 		<input type="submit" value="Change Password" class=" btn btn-primary" id="register_btn">
 		<input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='welcome.php'" id="register_btn">
 </ul>
-</form></div></div>
+</form><!--</div>-->
 <?php }?>
+</div>

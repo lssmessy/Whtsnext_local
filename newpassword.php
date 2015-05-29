@@ -1,5 +1,5 @@
 <title>New Password</title>
-<div id="register_tab">
+<div class="container">
 <?php
 include('core/init.php');
 login_redirect();
@@ -32,7 +32,7 @@ if(empty($_POST)===false)
 ?>
 
 <form action="" method="post"> 
-	<ul>
+	<ul class="nav">
 		<h2>Change Password:</h2>
 <?php 
 if(isset($_GET['Email'],$_GET['recovery_code'])==true)
@@ -71,7 +71,10 @@ if(isset($_GET['Email'],$_GET['recovery_code'])==true)
 		?>
 		<li> <input type="password" name="password" placeholder="New Password"> </li><br>
 		<li> <input type="password" name="confirm_password" placeholder="Confirm Password"> </li><br>
-		<li> <input type="submit" value="Change password"id="register_btn" > </li><br>
+		<li> <input type="submit" value="Change password" class=" btn btn-primary" id="register_btn" > 
+		<input type="button" value="Cancel" class=" btn btn-default" onclick="location.href ='index.php'" id="register_btn">
+		</li>
+		<br>
 	</ul>
 </form>
 <?php 	}
