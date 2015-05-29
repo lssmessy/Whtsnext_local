@@ -1,0 +1,4 @@
+﻿.borderless tbody tr td, .borderless thead tr th {
+    border: none;
+	border-top:none;
+}
