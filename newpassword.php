@@ -66,7 +66,8 @@ if(isset($_GET['Email'],$_GET['recovery_code'])==true)
 			$headers.= 'From: Whtsnext Admin <admin@whtsnext.com>' . "\r\n";
 			
 			mail($email, "Password changed for your account",
-			"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
+			"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>Hey there,
+			<br><br>
 			<p>Password for this account has been changed recently. If that wasn't you then please write 
 			back us at admin@whtsnext.com</p> <br><br>	
 			<strong><a href=http://whtsnext.com/3space_local><h2> -Team Whtsnext </h2></a></strong></body>

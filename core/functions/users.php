@@ -168,11 +168,13 @@ function email_active_again($register_data)
 	$Email_Code=$register_data['Email_Code'];
 	mysql_query("UPDATE `users` SET Email_Code='$Email_Code' WHERE Email='$email'");
 	$mail=email($register_data['Email'],"Activation link",
-	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'> Please click on the below link to Activate your account: <br><br>
+	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>Hey, <em><strong>".ucfirst($data['First_Name'])."</strong></em> <br><br>
+	Please click on the below link to Activate your account: <br><br>
 	<a href=http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here </a> <br> or copy-paste <br> 
 	http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. "
 	<br> 
-	-team whatsnext"
+	<br><br>
+	<strong><a href=http://whtsnext.com/3space_local><h2> -team whtsnext </h2></a></strong></body>"
 	);
 }
 
