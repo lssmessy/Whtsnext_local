@@ -19,7 +19,7 @@ if(empty($_POST)===false)
 	if(email_exists($_POST['email'])===false)
 		{
 			$email=htmlentities($_POST['email']);
-			$errors[]="* Email id '".$_POST['email']."' is not registered with us!!";
+			$errors[]="<p>* Email id '".$_POST['email']."' is not registered with us!! <a href='register.php'>Register Now</a></p>";
 		}
 	else if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)==false)
 		{

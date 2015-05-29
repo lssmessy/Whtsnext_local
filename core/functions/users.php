@@ -167,10 +167,10 @@ function email_active_again($register_data)
 	$email=$register_data['Email'];
 	$Email_Code=$register_data['Email_Code'];
 	mysql_query("UPDATE `users` SET Email_Code='$Email_Code' WHERE Email='$email'");
-	$mail=email($register_data['Email'],"Confirm your registration",
-	"Please click on the below link to Activate your account: <br><br>
-	<a href=http://localhost/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here </a> <br> or copy-paste <br> 
-	http://localhost/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. "
+	$mail=email($register_data['Email'],"Activation link",
+	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'> Please click on the below link to Activate your account: <br><br>
+	<a href=http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here </a> <br> or copy-paste <br> 
+	http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. "
 	<br> 
 	-team whatsnext"
 	);
@@ -207,11 +207,11 @@ function reset_password($email)
 	$data=mysql_fetch_assoc($userdata);
 	$mail=email($email,"Password Reset",
 	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>Hey, <em><strong>".ucfirst($data['First_Name'])."</strong></em> <br> <br>
-	Please <a href=http://localhost/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code.">Click here</a>
+	Please <a href=http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code.">Click here</a>
 	(or copy-paste below link ) to set new password for your account:<br><br>
-	http://localhost/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
+	http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
 	<br><br>
-	<strong><a href=http://localhost/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
+	<strong><a href=http://whtsnext.com/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
 	"
 	);
 }
@@ -225,11 +225,11 @@ function reset_password_tifin($email)
 	$data=mysql_fetch_assoc($userdata);
 	$mail=email($email,"Password Reset",
 	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>Hey, <em><strong>".ucfirst($data['Username'])."</strong></em> <br> <br>
-	Please <a href=http://localhost/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code.">Click here</a>
+	Please <a href=http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code.">Click here</a>
 	(or copy-paste below link ) to set new password for your account:<br><br>
-	http://localhost/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
+	http://whtsnext.com/3space_local/newpassword.php?Email=".$email."&recovery_code=".$recovery_code."
 	<br><br>
-	<strong><a href=http://localhost/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
+	<strong><a href=http://whtsnext.com/3space_local/welcome.php><h2> -team whtsnext </h2></a></strong></body>
 	"
 	);
 }
@@ -286,11 +286,11 @@ function register_user($register_data)
 	$data='\''.implode('\',\'',$register_data).'\'';
 	mysql_query("INSERT INTO `users` ($fields) VALUES ($data)");
 	$mail=email($register_data['Email'],"Confirm your registration",
-	"Hey, <strong>".ucfirst($register_data['First_Name'])."</strong> <br><br>
+	"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'> Hey, <strong>".ucfirst($register_data['First_Name'])."</strong> <br><br>
 	
 	<h1>Welcome to <strong>'WhtsNext'</strong> student's network!</h1><br><br>
 	Click on following link to Activate your account:<br><br>
-	<a href=http://localhost/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here to Activate</a><br><br>
+	<a href=http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here to Activate</a><br><br>
 	Please use following credentials to login after successful activation:<br><br>
 	Username: <em>".$register_data['Username']."</em><br><br>
 	Password: <em>".$pass."</em><br><br> 
@@ -313,7 +313,7 @@ function register_user_tifin($register_data)
 	
 	<h1>Welcome to <strong>'WhtsNext'</strong> student's network!</h1><br><br>
 	Click on following link to Activate your account:<br><br>
-	<a href=http://localhost/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here to Activate</a><br><br>
+	<a href=http://whtsnext.com/3space_local/activate.php?Email=".$register_data['Email']."&Email_Code=".$register_data['Email_Code']. ">Click here to Activate</a><br><br>
 	Please use following credentials to login after successful activation:<br><br>
 	Username: <em>".$register_data['Username']."</em><br><br>
 	Password: <em>".$pass."</em><br><br> 
