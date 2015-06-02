@@ -1,4 +1,5 @@
 <?php
+
 function email($to,$subject,$body)
 {
 	$headers = "MIME-Version: 1.0\r\n";

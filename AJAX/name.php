@@ -86,7 +86,8 @@ include('../core/init.php');
 	<strong>Email: </strong>".$email." 
 	<br><strong>Profession: </strong>".$profession."<br>
 	<strong>Skills: </strong>".$skills."</td>";
-	echo "<td><a class='btn btn-primary btn-sm' href='?userID=".$rows['Username']."' role='button'> View Profile </a></td></tr>";
+	echo "<td><a class='btn btn-primary btn-sm' href='?userID=".$rows['Username']."' role='button'> Send Request </a></td>";
+	echo "<td><a class='btn btn-success btn-sm' href='?userID=".$rows['Username']."' role='button'> View Profile </a></td></tr>";
 	}
 	}
 	echo "</table>";

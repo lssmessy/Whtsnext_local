@@ -116,7 +116,37 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("posts").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","/AJAX/set_prefs.php?search="+str,true);
+xmlhttp.open("GET","AJAX/set_prefs.php?search="+str,true);
 xmlhttp.send();
 }
+function new_posts()
+{
+	
+	str=document.getElementById("wall").value;
+	var xmlhttp;    
+/*if ($.trim(str)=="")
+  {
+  document.getElementById("search_text").innerHTML="";
+  return;
+  }*/
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("new_posts").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","AJAX/new_posts.php?wall="+str,true);
+xmlhttp.send();
+document.getElementById("wall").value='';
+}
+
 

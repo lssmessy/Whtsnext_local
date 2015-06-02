@@ -21,7 +21,7 @@ exit();
 	$image=show_user($userId);
 	if($image!=0)
 	{
-	echo "<img src=/".$image['Profile']." alt=".$image['Profile']." class='img img-responsive' style='width:100%; border-radius:5px;'/><br><br>";
+	echo "<img src=".$image['Profile']." alt=".$image['Profile']." class='img img-responsive' style='width:100%; border-radius:5px;'/><br><br>";
 	echo ucfirst($image['First_Name'])." ".ucfirst($image['Last_Name'])."<br><strong> Lives in </strong><br>";
 	
 	echo ucfirst($image['City']).",".ucfirst($image['Country'])."<br>";

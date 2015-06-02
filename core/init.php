@@ -5,6 +5,7 @@ session_start();
 require 'database/connection.php';
 require 'functions/general.php';
 require 'functions/users.php';
+
 if(logged_in()){
 	$user_id=$_SESSION['user_id'];
 $userdata=user_data($user_id,'Username','Password',

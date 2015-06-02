@@ -83,7 +83,7 @@ if(empty($_POST)==false && empty($errors)==true)
 
 ?>
 <div class="row">
-        <div class="col-sm-offset-4 col-sm-4 text text-lg" style="background-color:lavender;border-radius:15px">&nbsp &nbsp 
+        <div class="col-sm-offset-4 col-sm-4 text text-lg" style="background-color:lavender;border-radius:15px; margin-bottom:15px;">&nbsp &nbsp 
 		<form name="details" action="" method="post" onsubmit="return check();" role="form" role="form ">
 <div class="form-group"> <label for="reg"><h1>Registration:</h1></label>
 <?php if(empty($errors)==false)
@@ -372,7 +372,8 @@ if(empty($_POST)==false && empty($errors)==true)
 
 </div>
 
-&nbsp &nbsp <input type="submit" value="Register" class="btn btn-primary"> <input type="button" value="Cancel" onclick="location.href ='index.php'" class="btn btn-default">
+<button type="submit" value="Register" class="btn btn-primary"><strong><span class="glyphicon glyphicon-check"> </span> Register</strong></button>&nbsp &nbsp
+<button type="button" value="Cancel" onclick="location.href ='index.php'" class="btn btn-danger"><strong>Cancel</strong></button>
 </form></div>
         <div class="col-sm-4"></div>
       </div>
@@ -384,4 +385,5 @@ if(empty($_POST)==false && empty($errors)==true)
   <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="JS/date.js"></script>
 	
-<?php }?></div>
+<?php }?>
+</div>

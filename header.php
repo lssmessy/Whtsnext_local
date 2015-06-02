@@ -6,7 +6,7 @@
 <script type="text/javascript" src="JS/validate.js"></script>
 <script type="text/javascript" src="JS/myjs.js"> </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
             // When the document is ready
             $(document).ready(function () {
                 
@@ -15,7 +15,7 @@
                 });  
             
             });
-        </script>
+        </script> -->
 </head>
 <body style="margin-top:60px;">
 <nav class="navbar navbar-fixed-top navbar-inverse">

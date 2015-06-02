@@ -61,12 +61,14 @@ if(isset($_GET['Email'],$_GET['recovery_code'])==true)
 			{
 			$password=$_POST['password'];
 			$istrue=recover_password($password,$email);
+			$head_text="<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
+	<p style='background:black; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
 			$headers = "MIME-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 			$headers.= 'From: Whtsnext Admin <admin@whtsnext.com>' . "\r\n";
 			
 			mail($email, "Password changed for your account",
-			"<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>Hey there,
+			$head_text."Hey there,
 			<br><br>
 			<p>Password for this account has been changed recently. If that wasn't you then please write 
 			back us at admin@whtsnext.com</p> <br><br>	
