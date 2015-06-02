@@ -165,7 +165,7 @@ function is_active($email)
 function email_active_again($register_data)
 {
 	$head_text="<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
-	<p style='background:black; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
+	<p style='background:#3B5998; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
 	$email=$register_data['Email'];
 	$Email_Code=$register_data['Email_Code'];
 	mysql_query("UPDATE `users` SET Email_Code='$Email_Code' WHERE Email='$email'");
@@ -204,7 +204,7 @@ function recover_password($password,$email)
 function reset_password($email)
 {
 	$head_text="<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
-	<p style='background:black; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
+	<p style='background:#3B5998; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
 	$email=mysql_real_escape_string($email);
 	//$new_password=md5(substr($email,0,10));
 	$recovery_code=md5($email+microtime());
@@ -225,7 +225,7 @@ function reset_password($email)
 function reset_password_tifin($email)
 {
 	$head_text="<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
-	<p style='background:black; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
+	<p style='background:#3B5998; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
 	$email=mysql_real_escape_string($email);
 	//$new_password=md5(substr($email,0,10));
 	$recovery_code=md5($email+microtime());
@@ -288,7 +288,7 @@ function change_password($user_id,$password)
 function register_user($register_data)
 {
 	$head_text="<body style='background-color:lavender; border-radius:5px; border:1px solid lavender;'>
-	<p style='background:black; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
+	<p style='background:#3B5998; padding:20px;font:bold; font-size:30px'><a href='whtsnext.com/3space_local' style=' text-decoration:none;decoration:none;color:white;'>Whtsnext</a></p></br>";
 	array_walk($register_data,'array_sanitize');
 	$pass=$register_data['Password'];
 	$register_data['Password']=md5($register_data['Password']);

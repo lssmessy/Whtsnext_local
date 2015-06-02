@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<head><link rel="shortcut icon" type="image/x-icon" href="http://localhost/3space_local/images/favicon.ico" />
+<head><link rel="shortcut icon" type="image/x-icon" href="http://whtsnext.com/3space_local/images/favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1"> </meta>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
 <!--<link rel="stylesheet" type="text/css" href="CSS/temp.css" />-->

@@ -24,7 +24,7 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $headers.='From : admin@gmail.com';
 
-$check=mail('lssmob98@gmail.com',"Test mail",$message,$headers);
+$check=mail('8469212091@@nma.Vodafone.in',"Test mail",$message,$headers);
 if($check==true)
 echo "mail sent";
 else "mail failed";
