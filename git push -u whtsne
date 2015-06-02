@@ -1,0 +1,47 @@
+[33mcommit c7d7db42bd3a1c130b1bec590969f1e9fd8a3b67[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Tue Jun 2 18:09:14 2015 +0530
+
+    added header in email
+
+[33mcommit c34cdae5da3358d52fc01736e2ba8c449e485961[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 20:20:24 2015 +0530
+
+    minor changes
+
+[33mcommit 5595094b4e8863937810779bf1af05e6a8f19e0a[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 19:13:59 2015 +0530
+
+    minor changes
+
+[33mcommit 4877da4d410c248a9140d6c7ac725e097e77b221[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 18:58:49 2015 +0530
+
+    minor changes
+
+[33mcommit 508045d76f3dd3d093b2b433393280cff9d1e13e[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 18:50:15 2015 +0530
+
+    added email functionality for localhost
+
+[33mcommit 9625be0402dc3489c5797281b0586894cfa8dd2b[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 17:16:15 2015 +0530
+
+    added users.sql
+
+[33mcommit a1e9f5689bab006cdf0170455800e8ab6ef7ca70[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 16:54:26 2015 +0530
+
+    compatible to local
+
+[33mcommit e937346c79e734c25bb170d33c29f2a134723415[m
+Author: pritesh.patel <lssmessy@gmail.com>
+Date:   Fri May 29 16:26:00 2015 +0530
+
+    first upload
