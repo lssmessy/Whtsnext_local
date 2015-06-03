@@ -56,12 +56,16 @@ function post_data($site,$data){
 ?>
 <?php
 $site='http://site24.way2sms.com/';
-login($site."Login1.action","username=8469212091&password=6881");
-// grab_page($site."ebrdg.action?id=B7BA704382D72E9ADA31E76316E8E85C.w813");
-// grab_page($site."main.action?section=s&Token=1B8B8387D06B346F4694E0F8557A880B.w813&vfType=register_verify");
-// grab_page("http://site24.way2sms.com/sdash?Token=9276A2D3EE83A4C5C8A0C0F6E544CA40.w801");
-// post_data("http://site24.way2sms.com/smstoss.action","ssaction=ss&Token=9276A2D3EE83A4C5C8A0C0F6E544CA40.w801&mobile=8469212091&message=test+message&msgLen=128");
-grab_page($site."entry?ec=0080&id=0.7314917759038856");
-echo grab_page($site."main.action?section=s&Token=1B8B8387D06B346F4694E0F8557A880B.w813&vfType=register_verify");
-echo grab_page($site."entry?ec=0080&id=0.7314917759038856");
+login("http://www.160by2.com/re-login","rssData=&username=9426576315&password=08moth42");
+ grab_page("http://www.160by2.com/Main.action?id=BA0BAC475850A65CED2F0536DDE0438E.8514");
+ 
+ grab_page("http://tpc.googlesyndication.com/safeframe/1-0-2/html/container.html");
+ grab_page("http://www.160by2.com/js/jquery.js");
+ grab_page("http://www.160by2.com/SetFunBucks");
+grab_page("http://www.160by2.com/Dashboard?id=BA0BAC475850A65CED2F0536DDE0438E.8514");
+grab_page("http://www.160by2.com/css/160by2_styles.css?ranId=1");
+grab_page("http://pagead2.googlesyndication.com/pagead/js/lidar.js");
+post_data("http://www.160by2.com/Dashboard?id=BA0BAC475850A65CED2F0536DDE0438E.8514","hidSessionId=BA0BAC475850A65CED2F0536DDE0438E.8514&hidval=&arrayInvite=&dashing=aug30");
+echo grab_page("http://www.160by2.com/Dashboard?id=37DF4E82E66E8DC6B995AFA28CAE072B.8514");
+echo grab_page("http://www.160by2.com/Main.action?id=37DF4E82E66E8DC6B995AFA28CAE072B.8514");
  ?>
