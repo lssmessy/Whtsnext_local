@@ -81,11 +81,13 @@ curl_close($ch);
  
 ?>
 <?php
+if(empty($_POST)===false & $_POST['mobile']!=""&$_POST['message']!="")
+{
 $mobile=$_POST['mobile'];
 $message=$_POST['message'];
+//$message="Your activation code is ".rand(1000,9999);
 $site='http://site24.way2sms.com/';
-   login($site."Login1.action","username=8469212091&password=6881");
-
+login($site."Login1.action","username=8469212091&password=6881");
 
  $token=$_SERVER['id_value'];
 
@@ -96,5 +98,9 @@ $site='http://site24.way2sms.com/';
 login($site."smstoss.action","ssaction=ss&Token=".$token."&mobile=".$mobile."&message=".$message);//."&msgLen=115"
 //echo grab_page($site."smscofirm.action?SentMessage=".$message."&Token=".$token."&status=0");
 echo "Your message has been successfully sent to ".$mobile;
-
+}
+else
+{
+	header('Location: send_msg.php');
+}
  ?>
