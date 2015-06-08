@@ -7,7 +7,7 @@ function login($url,$data){
     $login = curl_init();
     curl_setopt($login, CURLOPT_COOKIEJAR, "cookie.txt");
     curl_setopt($login, CURLOPT_COOKIEFILE, "cookie.txt");
-    curl_setopt($login, CURLOPT_TIMEOUT, 40000);
+    curl_setopt($login, CURLOPT_TIMEOUT, 90000);
     curl_setopt($login, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($login, CURLOPT_URL, $url);
     curl_setopt($login, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -39,7 +39,7 @@ function grab_page($site){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 40);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 90000);
     curl_setopt($ch, CURLOPT_COOKIEFILE, "cookie.txt");
     curl_setopt($ch, CURLOPT_URL, $site);
     ob_start();
@@ -83,11 +83,16 @@ curl_close($ch);
 <?php
 if(empty($_POST)===false & $_POST['mobile']!=""&$_POST['message']!="")
 {
+$response=array();
+$username=$_POST['username'];
+$password=$_POST['password'];
+
 $mobile=$_POST['mobile'];
 $message=$_POST['message'];
+
 //$message="Your activation code is ".rand(1000,9999);
 $site='http://site24.way2sms.com/';
-login($site."Login1.action","username=9426576315&password=6881");
+login($site."Login1.action","username=".$username."&password=".$password."");
 
  $token=$_SERVER['id_value'];
 
@@ -97,10 +102,14 @@ login($site."Login1.action","username=9426576315&password=6881");
 
 login($site."smstoss.action","ssaction=ss&Token=".$token."&mobile=".$mobile."&message=".$message);//."&msgLen=115"
 //echo grab_page($site."smscofirm.action?SentMessage=".$message."&Token=".$token."&status=0");
-echo "Your message has been successfully sent to ".$mobile;
+$response['message']="Your message has been successfully sent to ".$mobile;
+$response['is_sent']=true;
+echo json_encode($response);
 }
 else
 {
+$response['is_sent']=false;
+echo json_encode($response);
 	header('Location: send_msg.php');
 }
  ?>

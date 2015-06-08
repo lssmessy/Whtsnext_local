@@ -16,10 +16,13 @@
   </head>
 
 <body>
+<center><p style="font-family:Arial Black;color:#438295;"><strong>Enter Your way2sms credentials and then mobile number whom you want to send a message: </strong></p>
 <form action="curl_text.php" method="post">
-<input type="text" name="mobile" placeholder="mobile" onkeypress="return isNumberKey(event)" maxlength="10">
-<input type="text" name="message" placeholder="message">
+<input type="text" name="username" placeholder="Username" onkeypress="return isNumberKey(event)" maxlength="10"></br>
+<input type="password" name="password" placeholder="Password"></br></br>
+<input type="text" name="mobile" placeholder="mobile" onkeypress="return isNumberKey(event)" maxlength="10"></br>
+<input type="text" name="message" placeholder="message"></br>
 <input type="submit" value="Send">
-</form>
+</form></center>
 </body>
 </html>
