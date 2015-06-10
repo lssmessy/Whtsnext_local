@@ -96,16 +96,25 @@ login($site."Login1.action","username=".$username."&password=".$password."");
 
  $token=$_SERVER['id_value'];
 
- grab_page($site."main.action?section=s&Token=".$token);
+ //grab_page($site."main.action?section=s&Token=".$token);
  grab_page($site."jsp/ReAdd.jsp?Token=".$token);
  grab_page($site."http://site24.way2sms.com/sendSMS?Token=".$token);
 
-login($site."smstoss.action","ssaction=ss&Token=".$token."&mobile=".$mobile."&message=".$message);//."&msgLen=115"
+$status=login($site."smstoss.action","ssaction=ss&Token=".$token."&mobile=".$mobile."&message=".$message);
+//echo $token;
+if(substr($token, 0,1) === "&")
+{
+$response['message']="Unable to send message to".$mobile."\nPlease check all the details again!";
+$response['is_sent']=false;
+echo json_encode($response);
+}
+else {
 //echo grab_page($site."smscofirm.action?SentMessage=".$message."&Token=".$token."&status=0");
 $response['message']="Your message has been successfully sent to ".$mobile;
 $response['is_sent']=true;
 echo json_encode($response);
 }
+ }
 else
 {
 $response['is_sent']=false;
